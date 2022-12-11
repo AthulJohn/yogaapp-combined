@@ -33,6 +33,10 @@ def register():
     slot=request.json['slot']
     phone=request.json['phone']
     new_user = Person(name=name,phone=phone, age=int(age),slot=int(slot))
+    if(db.session.query(Person).filter(Person.slot==slot).count()>50):
+        return Response(
+        "Slot Booking Limit Exceeded",
+        status=400),
     db.session.add(new_user)
     db.session.commit()
     return {'id':db.session.query(Person).filter(Person.name==name).first().reg_id}
@@ -41,6 +45,10 @@ def register():
 def changeslot():
     rid=request.json['reg-id']
     slot=request.json['slot']
+    if(db.session.query(Person).filter(Person.changedSlot==slot).count()>50):
+        return Response(
+        "Slot Booking Limit Exceeded",
+        status=400),
     try:
         db.session.query(Person).filter(Person.reg_id==rid).update({Person.changedSlot: slot})
         db.session.commit()
