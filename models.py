@@ -11,7 +11,10 @@ class Person(db.Model):
     phone=db.Column(db.String(12),nullable=False)
     age = db.Column(db.Integer, nullable=False)
     slot = db.Column(db.Integer, nullable=False)
+    #changeslot: Used to store changes slot of a user. At the beginning of each month, Slot will be updated as this value
+    #           Initially, equals to the initial slot
     changedSlot = db.Column(db.Integer,nullable=True)
+    #lastFeePaidMonth: Used to store the month in which the user paid the fees for the last time
     lastFeePaidMonth = db.Column(db.Date,nullable=True)
     registerDate = db.Column(db.Date,nullable=False)
 
@@ -28,11 +31,8 @@ class Person(db.Model):
     def changeSlot(self,slot):
         self.changedSlot=slot
 
+    #While fee payment, last fee paid month is updated as present month. As of the current version, user is having having only one option, to complete all his dues.
     def payFee(self):
-        if(self.lastFeePaidMonth==None):
-            self.lastFeePaidMonth=self.registerDate
-            self.lastFeePaidMonth.replace(day=1)
-        else:
             self.lastFeePaidMonth=datetime.datetime.now()
             self.lastFeePaidMonth.replace(day=1)
 
