@@ -48,7 +48,7 @@ class Person(db.Model):
     ##NOT COMPLETE FEE STATUS
 
     def to_json(self):
-        return {"reg_id":self.reg_id,"name":self.name,"phone":self.phone,"age":self.age,"slot":self.slot,"changedSlot":self.changedSlot,"lastFeePaidMonth":self.lastFeePaidMonth,"registerDate":self.registerDate}
+        return {"reg_id":self.reg_id,"name":self.name,"phone":self.phone,"age":self.age,"slot":self.slot,"changedSlot":self.changedSlot,"lastFeePaidMonth":str(self.lastFeePaidMonth),"registerDate":str(self.registerDate)}
     
     def __str__(self):
         return f"{self.reg_id}:{self.name}({self.age})"
