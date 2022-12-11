@@ -33,7 +33,8 @@ class Person(db.Model):
             self.lastFeePaidMonth=self.registerDate
             self.lastFeePaidMonth.replace(day=1)
         else:
-            self.lastFeePaidMonth=self.lastFeePaidMonth + datetime.timedelta(days=30)
+            self.lastFeePaidMonth=datetime.datetime.now()
+            self.lastFeePaidMonth.replace(day=1)
 
     def getFeeStatus(self):
         if(self.lastFeePaidMonth==None):
