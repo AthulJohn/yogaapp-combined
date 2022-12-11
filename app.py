@@ -7,7 +7,7 @@ import time
 import atexit
  
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://yogaapp_user:7aEjMGhA9mZwtPq6LNZjCY0vNvhMLmYv@dpg-ceaneqmn6mphc8u1dgjg-a/yogaapp"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://yogaapp_user:7aEjMGhA9mZwtPq6LNZjCY0vNvhMLmYv@dpg-ceaneqmn6mphc8u1dgjg-a/yogaapp"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
