@@ -36,17 +36,6 @@ class Person(db.Model):
             self.lastFeePaidMonth=datetime.datetime.now()
             self.lastFeePaidMonth.replace(day=1)
 
-    def getFeeStatus(self):
-        if(self.lastFeePaidMonth==None):
-            return "Registration Fees Not Paid"
-        else:
-            if(self.lastFeePaidMonth.month==datetime.datetime.now().month and self.lastFeePaidMonth.year==datetime.datetime.now().year):
-                return "No Dues"
-            elif(datetime.datetime.now().__sub__(self.lastFeePaidMonth).days<61):
-                return "Not Paid"
-            elif(datetime.datetime.now().__sub__(self.lastFeePaidMonth).days>60):
-                return "Dues"
-    ##NOT COMPLETE FEE STATUS
 
     def to_json(self):
         return {"reg_id":self.reg_id,"name":self.name,"phone":self.phone,"age":self.age,"slot":self.slot,"changedSlot":self.changedSlot,"lastFeePaidMonth":str(self.lastFeePaidMonth),"registerDate":str(self.registerDate)}

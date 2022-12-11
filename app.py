@@ -85,17 +85,15 @@ def payfees():
     db.session.commit()
     return {"message": "Fees Payed successfully."}
   
-@app.route('/getfeestatus', methods = ['GET'])
-def getfeestatus():
-    rid=request.args['reg-id']
-    targetPerson=db.session.query(Person).filter(Person.reg_id==rid)
-    if(targetPerson.count()==0):
-        return Response(
-        "Person not found",
-        status=400,
-        )
-    result=targetPerson[0].getFeeStatus()
-    return result
+@app.route('/getbookingstats', methods = ['GET'])
+def getbookingstats():
+    slot1=db.session.query(Person).filter(Person.slot==1).count()
+    slot2=db.session.query(Person).filter(Person.slot==2).count()
+    slot3=db.session.query(Person).filter(Person.slot==3).count()
+    slot4=db.session.query(Person).filter(Person.slot==4).count()
+    return {"slot1":slot1,"slot2":slot2,"slot3":slot3,"slot4":slot4}
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
