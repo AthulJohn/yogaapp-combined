@@ -26,7 +26,7 @@ Slot Table, to store slot details.
 Transactions Table, to store all transaction details.
 
 ER Diagram:
-
+![ER Diagram](ER Diagram.png)
 
 <h3>Tech Stacks used:</h3>
 Frontend Built using Flutter
