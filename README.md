@@ -35,12 +35,31 @@ Database used: PostgreSQL<br>
 API and database hosted on Render.com<br>
 Web App hosted on Firebase
 
+<h3>Screenshots:</h3>
+Home Screen:<br>
+![Home Screen](homepage.jpg)<br>
+
+Register Page:<br>
+![Register Page](register.jpg)<br>
+
+Authorize Page:<br>
+![Authorize Page](authorize.jpg)<br>
+Dashboard:<br>
+![Dashboard](dashboard.jpg)<br>
+Payment Page:<br>
+![Payments Page](payment.jpg)<br>
+Dashboard Page, when slot is changing:<br>
+![Dashboard Slot Changing](dashboard-selectslot.jpg)<br>
+Dashboard Page, when slot changed:<br>
+![Dashboard Slot Changed](dashboard-slotchange.jpg)<br>
+Know More Page:<br>
+![Know More Page](knowmore.jpg)<br>
+
 <h3>Known Issues</h3>
 Since this project is made as a mobile app, the app faces a couple of issue in the web version
   <ul>
     <li>Restarting a page will cause the data to be removed from the local base. Thus the web app shoud be started from the homescreen to recollect the data.</li>
-    <li>The Postgres url is not hidden in the github repository. It should be hidden for security.<li>
-    
+    <li>The Postgres url is not hidden in the github repository. It should be hidden for security.</li>
   </ul>
 
 
