@@ -35,6 +35,13 @@ Database used: PostgreSQL<br>
 API and database hosted on Render.com<br>
 Web App hosted on Firebase
 
+<h3>Known Issues</h3>
+Since this project is made as a mobile app, the app faces a couple of issue in the web version
+  <ul>
+    <li>Restarting a page will cause the data to be removed from the local base. Thus the web app shoud be started from the homescreen to recollect the data.</li>
+    <li>The Postgres url is not hidden in the github repository. It should be hidden for security.<li>
+    
+  </ul>
 
 
 
