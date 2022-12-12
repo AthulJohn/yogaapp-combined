@@ -36,11 +36,12 @@ API and database hosted on Render.com<br>
 Web App hosted on Firebase
 
 <h3>Screenshots:</h3>
+  
 Home Screen:<br>
 ![Home Screen](homepage.jpg)<br>
 
 Register Page:<br>
-![Register Page](register.jpg)<br>
+![Register Page](register-form.jpg)<br>
 
 Authorize Page:<br>
 ![Authorize Page](authorize.jpg)<br>
