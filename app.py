@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_migrate import Migrate
-from models import Person,db
+from models import Person,db 
 from routes.register_route import register_blueprint
 from routes.authorize_route import auth_blueprint
 from routes.payfees_route import pay_fees_blueprint
@@ -13,6 +13,9 @@ app = Flask(__name__)
 
 #Below URL contains sensitive data. Should be hide in production level
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://yogaapp_user:7aEjMGhA9mZwtPq6LNZjCY0vNvhMLmYv@dpg-ceaneqmn6mphc8u1dgjg-a/yogaapp"
+#URL for External Host:
+# app.config['SQLALCHEMY_DATABASE_URI']="postgresql://yogaapp_user:7aEjMGhA9mZwtPq6LNZjCY0vNvhMLmYv@dpg-ceaneqmn6mphc8u1dgjg-a.oregon-postgres.render.com/yogaapp"
+
 #URL for Local Host:  
 # app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:noobie@localhost:5432/yogaapp"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -36,6 +39,8 @@ scheduler.start()
 #general Flask Code
 @app.route('/')
 def index():
+    db.drop_all()
+    db.create_all()
     return "Yoga Class API. Available endpoints: /register (POST), /changeslot (PUT), /authorize (GET), /payfees (PUT), getbookingstats (GET)"
 
 
