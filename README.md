@@ -1,6 +1,7 @@
 # yogaapp-combined
 
 Yoga App Frontend and backend combined
+Made for Flexmoney Internship 2023 Assignment
 
 A Mobile App is made using flutter. It is also deployed as a web app, but the UI is best suited for a mobile.
 
