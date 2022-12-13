@@ -4,7 +4,8 @@ Yoga App Frontend and backend combined
 
 A Mobile App is made using flutter. It is also deployed as a web app, but the UI is best suited for a mobile.
 
-Working Web App Link: https://yoga-app-f6f3a.web.app/#/
+Working Web App Link: https://yoga-app-f6f3a.web.app/#/<br>
+Download the mobile app here: [Download apk](app.apk)
 
 <h3>Features:</h3>
 This app includes the asked features, that is Registration, Slot Changing, and Fee Payment.<br>
