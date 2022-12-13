@@ -9,7 +9,7 @@ Download the mobile app here: [Download apk](app.apk)
 
 <h3>Features:</h3>
 This app includes the asked features, that is Registration, Slot Changing, and Fee Payment.<br>
-Apart from that, a small <i>know more<i> screen is included for users to know about the yoga class.<br>
+Apart from that, a small <i>know more</i> screen is included for users to know about the yoga class.<br>
 Also, users can see thier current slot, next month's slot, thier due fees, registration ID etc.
 
 Proper Authentication is not done, but inorder to identify users, Thier Registration Id, as well as phone number is used.
@@ -28,6 +28,12 @@ Transactions Table, to store all transaction details.
 
 ER Diagram:
 ![ER Diagram](ER-Diagram.png)
+<br><br>
+Here, Data is inputed to Person table during the time of registration.<br><br>
+Data in the slot table is added while registering, and it contains slot details of every user for every month, till the next month.<br>
+During registration, the slot given by the user is set as the current month slot, as well as the next month slot.<br>
+Whenever a user edits slot, only the next month slot is changed.<br><br>
+Transaction table is updated after every Fee Payment. The last payment of a user will provide the the number of months due to pay.<br><br>
 
 <h3>Tech Stacks used:</h3>
 Frontend Built using Flutter<br>
