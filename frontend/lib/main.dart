@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider<Person>(
         create: (context) => Person.empty(),
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Yoga App',
           theme: ThemeData(
             fontFamily: 'Poppins',

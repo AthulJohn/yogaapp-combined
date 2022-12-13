@@ -22,6 +22,7 @@ Future<Person?> authorize(String id, String phone) async {
       );
       if (response.statusCode == 200) {
         Map<String, dynamic> m = jsonDecode(response.body);
+        print(m);
         return Person.fromJson(m);
       }
       return null;
@@ -29,6 +30,7 @@ Future<Person?> authorize(String id, String phone) async {
       return null;
     }
   } catch (e) {
+    print(e);
     return null;
   }
 }

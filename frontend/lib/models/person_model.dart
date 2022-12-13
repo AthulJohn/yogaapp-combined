@@ -41,8 +41,8 @@ class Person extends ChangeNotifier {
           age: json["age"],
           id: json["reg_id"],
           changedslot: json["changedSlot"],
-          feePaidMonth: DateTime.tryParse(json["lastFeePaidMonth"] ?? ""),
-          registerDate: DateTime.tryParse(json["registerDate"] ?? ""),
+          feePaidMonth: dateTimefromString(json["lastFeePaidMonth"]),
+          registerDate: dateTimefromString(json["registerDate"]),
         );
 
   Map<String, dynamic> toJson() {
@@ -151,4 +151,10 @@ class Person extends ChangeNotifier {
       return "Fees Due from ${months[feePaidMonth!.month - 1]}";
     }
   }
+}
+
+DateTime? dateTimefromString(String? s) {
+  if (s == "" || s == null) return null;
+  // print(DateTime.parse(s.split(" ")[0]));
+  return DateTime.parse(s);
 }
