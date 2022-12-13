@@ -46,6 +46,15 @@ Database used: PostgreSQL<br>
 API and database hosted on Render.com<br>
 Web App hosted on Firebase
 
+<h3>Api:</h3>
+Api Deployed on https://yoga-api.onrender.com/
+<h5>Api Endpoints:</h5>
+/register: [POST] used to register a user<br>
+/authorize: [GET] used to identify a user<br>
+/payfees: [PUT] used to pay all pending fees<br>
+/changeslot: [PUT] used to change the slot for the next month<br>
+/getbeekingstats: [GET] used to fetch current booking stats
+
 <h3>Known Issues</h3>
 Since this project is made as a mobile app, the app faces a couple of issue in the web version
   <ul>
