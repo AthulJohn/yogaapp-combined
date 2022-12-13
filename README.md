@@ -71,23 +71,21 @@ Since this project is made as a mobile app, the app faces a couple of issue in t
 <h3>Screenshots:</h3>
   
 Home Screen:<br>
-![Home Screen](homepage.jpg)<br>
-
+![Home Screen](screenshots/homepage.jpg)<br>
 Register Page:<br>
-![Register Page](register-form.jpg)<br>
-
+![Register Page](screenshots/register-form.jpg)<br>
 Authorize Page:<br>
-![Authorize Page](authorize.jpg)<br>
+![Authorize Page](screenshots/authorize.jpg)<br>
 Dashboard:<br>
-![Dashboard](dashboard.jpg)<br>
+![Dashboard](screenshots/dashboard.jpg)<br>
 Payment Page:<br>
-![Payments Page](payment.jpg)<br>
+![Payments Page](screenshots/payment.jpg)<br>
 Dashboard Page, when slot is changing:<br>
-![Dashboard Slot Changing](dashboard-selectslot.jpg)<br>
+![Dashboard Slot Changing](screenshots/dashboard-selectslot.jpg)<br>
 Dashboard Page, when slot changed:<br>
-![Dashboard Slot Changed](dashboard-slotchange.jpg)<br>
+![Dashboard Slot Changed](screenshots/dashboard-slotchange.jpg)<br>
 Know More Page:<br>
-![Know More Page](knowmore.jpg)<br>
+![Know More Page](screenshots/knowmore.jpg)<br>
 
 
 
