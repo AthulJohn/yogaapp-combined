@@ -27,7 +27,7 @@ class Person(db.Model):
 
 
     def to_json(self):
-        return {"reg_id":self.reg_id,"name":self.name,"phone":self.phone,"age":self.age,"registerDate":self.registerDate}
+        return {"reg_id":self.reg_id,"name":self.name,"phone":self.phone,"age":self.age,"registerDate":str(self.registerDate)}
 
 class IndividualSlots(db.Model):
     __tablename__ = 'individualslots'
